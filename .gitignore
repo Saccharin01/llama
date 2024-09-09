@@ -1,0 +1,8 @@
+# Python 가상 환경 디렉토리
+venv/
+env/
+.venv/
+
+Lib/
+Scripts/
+share/
