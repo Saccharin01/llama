@@ -1,0 +1,17 @@
+[
+  {
+    "user_input": "hello",
+    "response": "Hello! How are you today? Is there something I can help you with, or would you like to chat?",
+    "create_date": "2024-09-09T07:45:53.8950865Z"
+  },
+  {
+    "user_input": "안녕",
+    "response": "안녕하세요! 잘 지내시나요?",
+    "create_date": "2024-09-09T07:46:01.2984994Z"
+  },
+  {
+    "user_input": "화살표 함수 표현식이 뭔지 알려줘",
+    "response": "화살표 함수 표현식, 또는 화살표 함수는 함수를 더 간결하고 명확하게 정의할 수 있는 문법입니다.\n\n기존 함수 정의 방식은 다음과 같습니다.\n```javascript\nfunction add(a, b) {\n  return a + b;\n}\n```\n이 함수는 `add`라는 이름과 2개의 인자를 받습니다. 인자는 `a`와 `b`이며, 반환값은 그 두 값을 더한 값입니다.\n\n화살표 함수 표현식으로 정의하면 다음과 같습니다.\n```javascript\nconst add = (a, b) => a + b;\n```\n이 함수는 동일하게 2개의 인자를 받고 반환값도 동일합니다. 하지만 표현식이 훨씬 간결하고 읽기 쉬워졌습니다.\n\n화살표 함수에는 몇 가지 특징이 있습니다.\n\n* 화살표 함수의 이름은 반드시 있어야 합니다.\n* 화살ロー 함수는 `=>` 기호로 정의됩니다.\n* 화살표 함수의 인자는 `(인자1, 인자2)`와 같은 형식으로 정의됩니다.\n* 화살표 함수의 반환값은 `return` 키워드를 사용하지 않고 `=>` 기호 다음에 바로 표현할 수 있습니다.\n\n화살표 함수는 함수를 정의할 때 유용하지만, 화살표 함수로 만든 함수가 메소드와 같은 객체 속성일 경우, 이 함수의 `this` 바인딩이 전역 오브젝트로 바뀌게 됩니다. 예를 들어,\n```javascript\nconst person = {\n  name: \"john\",\n  sayHello: () => console.log(`hello, ${this.name}`)\n};\n\nperson.sayHello(); // undefined 대신 console에 'hello, undefined'가 찍힘.\n```\n위의 코드에서 `sayHello` 메소드는 화살표 함수로 정의되어있는데, 그 결과 메소드 호출시 `this` 바인딩이 전역 오브젝트로 바뀌게 되고 `name` 프로퍼티도 undefined가 찍힘. \n\n만약 메소드로 만들고 싶다면, 다음과 같이 작성합니다.\n```javascript\nconst person = {\n  name: \"john\",\n  sayHello: function() { console.log(`hello, ${this.name}`) }\n};\n\nperson.sayHello(); // hello, john이 찍힘.\n```\n화살표 함수는 일반적인 함수와 달리 `super`를 호출할 수 없습니다.\n\n마지막으로, 화살표 함수는 반드시 이름을 가지고 있어야 합니다. 만약 이름이 없다면 TypeError가 발생합니다.",
+    "create_date": "2024-09-09T07:48:05.5302403Z"
+  }
+]
